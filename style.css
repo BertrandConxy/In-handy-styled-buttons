@@ -149,6 +149,7 @@ header {
     overflow: hidden;
     margin: 2rem 0;
     text-align: center;
+    border: 3px solid #272727;
 }
 
 .btn-1:before {
@@ -156,7 +157,7 @@ header {
     position: absolute;
     left: 0;
     top: 0;
-    background: rgb(53, 227, 243);
+    background: rgb(53, 218, 243);
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -171,7 +172,6 @@ a:hover::before {
 
 .btn-2 {
     transition: all .7s ease-in-out;
-    border: 3px solid #351435;
 }
 
 .btn-2:before {
@@ -193,7 +193,6 @@ a:hover::before {
 
 .btn-3 {
     transition: all .7s ease;
-    border: 3px solid #351435;
 }
 
 .btn-3:before {
@@ -231,7 +230,6 @@ a:hover::before {
 
 .btn-4 {
     transition: all 1s ease;
-    border: 3px solid #351435; 
 }
 
 .btn-4:hover {
@@ -254,4 +252,103 @@ a:hover::before {
 
 .btn-4:hover:before {
     transform: translateX(100%) rotate(45deg);
+}
+
+.btn-5 {
+    transition: all 1s ease;
+}
+
+.btn-5:before {
+    content: 'Hover Me';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #272727;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(5);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+
+.btn-5:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.btn-6 {
+    transition: all 0.5s;
+}
+
+.btn-6::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #272727;
+    z-index: -1;
+    border-radius: 0 0 50% 50%;
+    transition: all .5s;
+}
+
+.btn-6:hover {
+    color: #f1f1f1;
+}
+
+.btn-6:hover:before {
+    height: 200%;
+}
+
+
+.btn-7 {
+    color: transparent;
+}
+
+.btn-7:before {
+    content: 'Hover Me';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #272727;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .8s;
+}
+.btn-7:after {
+    content: 'Hover Me';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #272727;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .8s;
+    transform: scale(0) rotateY(0);
+    opacity: 0;
+}
+
+.btn-7:hover:before {
+    left: 100%;
+    transform: scale(0) rotateY(1turn);
+    opacity: 0;
+}
+.btn-7:hover:after {
+    left: 0;
+    transform: scale(1) rotateY(1turn);
+    opacity: 1;
 }
