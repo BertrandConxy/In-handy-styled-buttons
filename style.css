@@ -352,3 +352,56 @@ a:hover::before {
     transform: scale(1) rotateY(1turn);
     opacity: 1;
 }
+
+.btn-8 {
+    background: transparent;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    /* transition: all .3s; */
+    color: #f1f1f1;
+}
+
+.btn-8:hover {
+    color: #24303a;
+}
+
+.btn-8:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    background: #20caff;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transform-origin: top;
+    transition: all .3s;
+}
+.btn-8::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 100%;
+    height: 100%;
+    background: #ff7675;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transition: all .3s;
+    transform-origin: bottom;
+}
+
+.btn-8:hover:before {
+    top: -6px;
+    left: 0;
+    transform: perspective(900px) rotateX(75deg);
+}
+.btn-8:hover:after {
+    top: 6px;
+    left: 0;
+    transform: perspective(900px) rotateX(-75deg);
+}
