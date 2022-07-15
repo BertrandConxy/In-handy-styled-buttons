@@ -360,7 +360,7 @@ a:hover::before {
     font-weight: bold;
     letter-spacing: 2px;
     position: relative;
-    /* transition: all .3s; */
+    transition: all .3s;
     color: #f1f1f1;
 }
 
@@ -404,4 +404,64 @@ a:hover::before {
     top: 6px;
     left: 0;
     transform: perspective(900px) rotateX(-75deg);
+}
+
+.btn-9:hover {
+    color: #f1f1f1;
+}
+
+.btn-9:before, .btn-9:after {
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background: #351435;
+    z-index: -1;
+    transition:all 0.5s ;
+}
+
+.btn-9::before {
+    top: 0;
+    left: -25%;
+}
+
+.btn-9::after {
+    top: -100%;
+    left: 25%;
+}
+
+.btn-9:hover:before {
+    top: 0;
+    left: 0;
+}
+
+.btn-9:hover:after {
+    top: 0;
+}
+
+.btn-9-span::before, .btn-9-span::after {
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background: #351435;
+    z-index: -1;
+    transition:all 0.5s ;
+}
+
+.btn-9-span::before {
+    top: 100%;
+    left: 50%;
+}
+
+.btn-9-span::after {
+    top: 0;
+    left: 100%;
+}
+
+.btn-9:hover .btn-9-span::before {
+    top: 0;
+}
+.btn-9:hover .btn-9-span::after {
+    left: 75%;
 }
