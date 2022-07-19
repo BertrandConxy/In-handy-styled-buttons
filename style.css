@@ -513,16 +513,3 @@ a:hover::before {
     width: 100%;
     height: 100%;
 }
-
-.btn-11 {
- position: relative;
-}
-
-.wave {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 100%;
-    background: red;
-}
