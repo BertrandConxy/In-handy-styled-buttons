@@ -723,3 +723,48 @@ a:hover::before {
     opacity: 1;
     transition-delay: 1s;
 }
+
+menu {
+}
+
+.menu-1 {
+    margin: 4rem 0;
+
+}
+
+.menu-1 a {
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 1px #272727;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.menu-1 a:hover {
+    color: #272727;
+    -webkit-text-stroke: 1px white;
+    transition: all 0.5s;
+}
+
+.menu-1 a::before,
+.menu-1 a::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.menu-1 a:hover::before {
+    color: rgb(187, 0, 0);
+    z-index: 1;
+    -webkit-text-stroke: 1px black;
+    transform: translate(10px, -10px);
+}
+
+.menu-1 a:hover::after {
+    color: rgb(119, 239, 255);
+    z-index: 2;
+    -webkit-text-stroke: 1px black;
+    transform: translate(20px, -20px);
+}
