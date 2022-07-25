@@ -724,8 +724,6 @@ a:hover::before {
     transition-delay: 1s;
 }
 
-menu {
-}
 
 .menu-1 {
     margin: 4rem 0;
@@ -767,4 +765,44 @@ menu {
     z-index: 2;
     -webkit-text-stroke: 1px black;
     transform: translate(20px, -20px);
+}
+
+.smoky-text {
+    display: flex;
+}
+
+.smoky-text li {
+    font-size: 100px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    transition: 2s;
+    margin: 2rem 0;
+
+
+}
+
+.smoky-text:hover li {
+    transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+    filter: blur(20px);
+}
+
+.smoky-text li:nth-child(1) {
+    transition-delay: 0;
+}
+
+.smoky-text li:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.smoky-text li:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+.smoky-text li:nth-child(4) {
+    transition-delay: 1.2s;
+}
+
+.smoky-text li:nth-child(5) {
+    transition-delay: 1.6s;
 }
