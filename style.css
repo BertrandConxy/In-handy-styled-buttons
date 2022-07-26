@@ -997,3 +997,28 @@ h1 span {
         transform: rotateX(180deg) rotateY(180deg) ;
     }
 }
+
+.btn-11 {
+    transition: all 0.3s;
+}
+
+.btn-11:hover {
+    border: 6px solid #272727;
+    background: #272727;
+    color: #f1f1f1;
+    animation: shake 0.2s linear 1;
+}
+
+@keyframes shake {
+    33% {
+        transform: rotate(10deg);
+    }
+
+    66% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
