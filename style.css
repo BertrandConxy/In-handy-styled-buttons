@@ -1022,3 +1022,33 @@ h1 span {
         transform: rotate(10deg);
     }
 }
+
+.btn-12::before {
+    content: '';
+    background: #ff7675;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    z-index: -1;
+    transform: skew(-15deg);
+    animation: moving 1.2s linear infinite;
+    transition: all 0.5s;
+}
+
+.btn-12:hover::before {
+    width: 100%;
+    transform: skew(0);
+    animation: none;
+}
+
+@keyframes moving {
+    from {
+        left: -100px;
+    }
+
+    to {
+        left: 100%;
+    }
+}
